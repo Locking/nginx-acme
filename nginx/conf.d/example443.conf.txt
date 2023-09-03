@@ -2,8 +2,8 @@ server {
    	listen 443 ssl;
 	server_name  test.example.com;
 
-        ssl_certificate         /acme.sh/test.example.com/fullchain.cer;
-	ssl_certificate_key     /acme.sh/test.example.com/test.example.com.key;
+        ssl_certificate         /acme.sh/test.example.com_ecc/fullchain.cer;
+	ssl_certificate_key     /acme.sh/test.example.com_ecc/test.example.com.key;
 
   
   	# Improve HTTPS performance with session resumption
@@ -27,7 +27,7 @@ server {
   	# Enable OCSP stapling (http://blog.mozilla.org/security/2013/07/29/ocsp-stapling-in-firefox)
   	ssl_stapling on;
   	ssl_stapling_verify on;
-  	ssl_trusted_certificate  /acme.sh/test.example.com/fullchain.cer;
+  	ssl_trusted_certificate  /acme.sh/test.example.com_ecc/fullchain.cer;
   	resolver 8.8.8.8 8.8.4.4 valid=300s;
   	resolver_timeout 5s;
 
